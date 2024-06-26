@@ -1,0 +1,584 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/effects.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bcolor p-4">
+        <div class="container px-5 py-3">
+          <a class="navbar-brand bcolor ms-5" href="#" style="cursor:default;"><img src="{% static 'img/Screenshot 2024-04-13 053747.png'%}" height="37" width="95"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ps-1 style fsize fw-semibold">
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'index'%}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'about'%}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pol hover-underline-animation" href="{% url 'features'%}">Feature</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'price'%}">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'contact'%}">Teams</a>
+              </li>
+            </ul>
+            <a href="{% url 'retrieve' %}" type="button" class="btn btn-outline-light but text-dark ms-5 px-4 py-2">CRUD</a>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid area_create">
+      <div class="container">
+        <div class="row pt-5 justify-content-center">
+          <div class="col-9 text-center  py-5 border-bottom border-4 rounded-4">
+            <h6 class="text-light-emphasis fw-light " style="font-family: monospace;">AERIAL FOR TEAMS</h6>
+            <h1 class="text-dark style fw-bolder display-2">Build like the best teams on the planet </h1>
+            <div class="col-12 px-5">
+              <h5 class=" text-light-emphasis px-4 pt-2 pb-3 "  >With CI/CD, Dependabot, and the world’s largest developer community, GitHub gives your team everything they need to ship better software faster.</h5>
+            </div>
+            <button class="btn btn-outline-dark m-3 mb-5 me-1 px-4   fw-semibold fs-4">Get started with Teams </button>
+            <button class="btn boton fs-4 m-3 mb-5 ms-1 px-5 fw-semibold">Sign up for free</button>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 py-5 pb-2 border-end border-2">
+          </div>
+          <div class="col-6 py-5 pb-2 border-start border-2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 py-5 pb-2 border-end border-2">
+          </div>
+          <div class="col-6 py-5 pb-2 border-start border-2">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-9 text-center px-5">
+            <h1 class=" px-5 style fw-semibold display-2">
+              Ready to get your team started?
+            </h1>
+          </div> 
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6  text-center p-5">
+              <div class="row shadow border justify-content-center rounded-3 bgcolorb pt-5" >
+                <h2 class="px-5 style fw-semibold text-dark">Aerial Free
+                </h2>
+                <h6 class="col-7 fs-5 text-light-emphasis px-5">Basics for teams and developers
+                </h6>
+                <div class="content1">
+                <div class="row mt-4">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/infinity.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Unlimited public/private repositories </h6>
+                  </div>
+                </div> 
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis"> 2,000 Actions minutes/month</h6>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis"> 500MB of GitHub Packages storage</h6>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Community Support</h6>
+                  </div>
+                </div> 
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-5">
+                    <a href="{% url 'price'%}" class="btn boton fw-semibold fs-4" type="button" style="width: 95%; display:inline-block;">Sign up for free</a>
+                  </div>
+                </div>  
+              </div>
+          </div>
+          <div class="col-6 text-center p-5">
+              <div class="row shadow justify-content-center border rounded-3 bgcolorb pt-5">
+                <h2 class="px-5 style fw-semibold text-dark">Aerial Team
+                </h2>
+                <h6 class="col-11 fs-5 text-light-emphasis px-5">Advanced collaboration and deployment features for teams                  
+                </h6>
+                <div class="content1">
+                <div class="row mt-4">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/back.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Everything included in Free, plus ... </h6>
+                  </div>
+                </div> 
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis"> 3,000 Actions minutes/month</h6>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis"> 2GB of Aerial Packages storage</h6>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Aerial Codespaces</h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Protected branches</h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Multiple reviewers in pull requests</h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Code owners</h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Draft pull requests
+                    </h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Required reviewers</h6>
+                  </div>
+                </div>  
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Pages and Wikis</h6>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3 text-end  pe-0"><img src="{% static 'img/check.png'%}" height="20px" width="auto"></div>
+                  <div class="col-9 text-start">
+                    <h6 class="fw-normal text-light-emphasis">Web-based support
+                    </h6>
+                  </div>
+                </div> 
+              </div>
+              <div class="row">
+                <div class="col-12 mb-5">
+                  <a href="{% url 'price'%}" class="btn btn-outline-dark fw-semibold fs-4" type="button" style="width: 95%; display:inline-block;">Get started with Teams</a>
+                </div>
+              </div>
+              </div>       
+          </div>  
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-center mb-4">
+            <img src="{% static 'img/peak.png'%}" class="img-fluid m-3" >
+            <img src="{% static 'img/trustpilot.png'%}" class="img-fluid m-3">
+            <img src="{% static 'img/gatsby.png'%}" class="img-fluid m-3">
+            <img src="{% static 'img/trayio.png'%}" class="img-fluid m-3">
+            <img src="{% static 'img/kuber.png'%}" class="img-fluid m-3">
+            <img src="{% static 'img/front.png'%}" class="img-fluid m-3">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 py-5 pb-2 border-end border-2">
+        </div>
+        <div class="col-6 py-5 pb-2 border-start border-2">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid b_oolr">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 py-5 pb-2 border-end border-2">
+          </div>
+          <div class="col-6 py-5 pb-2 border-start border-2">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-8 text-center py-5 pb-2">
+            <h6 class="text-dark  fw-light">COLLABORATION</h6>
+            <h1 class="text-dark style fw-bolder display-2">Manage everything in one place </h1>
+          </div> 
+        </div>
+        <div class="row content3">
+          <div class="col-6 py-5 pb-2 border-end border-2">
+          </div>
+          <div class="col-6 py-5 pb-2 border-start border-2">
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="container-fluid b_oolr">
+      <div class="row">
+          <div class="col-6 border-end border-2 pe-4">
+            <div class="border shadow left8245 float-end bg-white rounded-3 me-0 p-4">
+              <h5>
+                Connect your favorite tools
+              </h5>
+              <h6 class="text-light-emphasis">              
+                Build the way that works best for you with support for all your go-to integrations, including Slack, Jira, and more.
+              </h6>
+            </div>
+          </div>
+          <div class="col-6 border-start border-2 ">
+            <div class="circle"></div>
+            <div class="right4">
+              <div class=" right8245 ms-5">
+                <img src="{% static 'img/integrations-2-000d77e1d36b.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+                <img src="{% static 'img/integrations-1-4311ed2461c4.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+              </div>
+              <div class=" right8245 ms-1">
+                <img src="{% static 'img/integrations-4-c2eb141b3cdb.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+                <img src="{% static 'img/integrations-3-907d853b7e2f.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+              </div>
+              <div class=" right8245 ms-5 ">
+                <img src="{% static 'img/integrations-6-c42707268ba6.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+                <img src="{% static 'img/integrations-5-c28e47488ea8.webp'%}" height="80px" class="p-2 m-2 bg-white shadow rounded-3 border float-end">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row content3">
+        <div class="col-6 py-5 pb-2 border-end border-2">
+        </div>
+        <div class="col-6 py-5 pb-2 border-start border-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 border-end border-2 pe-4">
+          <div class=" left82 float-end p-4">
+            <img src="{% static 'img/access-82367c9e4dd7.webp'%}" class="" height="420px">
+          </div>
+        </div>
+        <div class="col-6 border-start border-2 ">
+          <div class="circle"></div>
+          <div class="right474 ms-2 shadow bg-white rounded-3 p-4">
+            <h5>
+              Add your team in a click
+            </h5>
+            <h6 class="text-light-emphasis">               
+              Seamlessly update permissions and add new users as you build, whether you’re on a team of two or two thousand.
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="row content4">
+        <div class="col-6 py-5 pb-2 border-end border-2">
+        </div>
+        <div class="col-6 py-5 pb-2 border-start border-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 border-end border-2 pe-4">
+          <div class="border shadow left8245 float-end bg-white rounded-3 me-0 p-4">
+            <h5>
+              Connect your favorite tools
+            </h5>
+            <h6 class="text-light-emphasis">              
+              Build the way that works best for you with support for all your go-to integrations, including Slack, Jira, and more.
+            </h6>
+          </div>
+        </div>
+        <div class="col-6 border-start border-2 ">
+          <div class="circle"></div>
+          <div class="right474 ms-2">
+            <img src="{% static 'img/code-review-5bb65d17b71b.png'%}" style="margin-left: -69px; margin-top: -121px ;" height="550px">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 border-end border-2 pe-4">
+          <div class=" left457 float-end p-4">
+            <img src="{% static 'img/projects-36af2ec9bad1.png'%}" class="p-4 " style="margin-top: -80px; margin-right: -65px;"  height="420px">
+          </div>
+        </div>
+        <div class="col-6 border-start border-2 ">
+          <div class="circle"></div>
+          <div class="right474 ms-2 shadow bg-white rounded-3 p-4">
+            <h5>
+              Plan together
+            </h5>
+            <h6 class="text-light-emphasis">               
+              Make it easy for project managers and developers to coordinate, track, and update their work in one place—so projects stay on schedule.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 py-5 pb-2 border-end border-2">
+          </div>
+          <div class="col-6 py-5 pb-2 border-start border-2">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-center py-5 pb-4">
+            <h6 class="text-dark  fw-light">AUTOMATION</h6>
+            <h1 class="text-dark style fw-bolder display-2">Build CI/CD workflows that work for you </h1>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-6 py-5  border-end border-2">
+          </div>
+          <div class="col-6 py-5  border-start border-2">
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container ">
+      <div class="row justify-content-center ">
+        <div class="col-6 bgiormg">
+            <div class="row vhs justify-content-end">
+              <a href="https://github.com/marketplace/actions/checkout" class="col-6 shadow p-0 cocoon lhs border rounded-3 ">
+                <div class="lhs_u bg-white">
+                  <img src="{% static 'img/play-button.png'%}" class="p-3 floaty" height="80px">
+                  <h5 class=" pt-3 mb-0">Checkout </h5>
+                  <p class="pb-0 fw-normal text-light-emphasis" style="font-size:small;">Chechout a aerial repository at a particular version</p></div>
+                <div class="lhs_l border-top ps-4">
+                  <p class="pt-2 m-0">name: Checkout</p><p class="m-0">users: actions/Checkout v2.1.0</p>
+                </div>
+              </a>
+            </div>
+            <div class="row vhs justify-content-start">
+              <a href="https://github.com/marketplace/actions/setup-node-js-environment" class="col-6 shadow p-0 cocoon lhs border rounded-3 ">
+                <div class="lhs_u bg-white">
+                  <img src="{% static 'img/play-button.png'%}" class="p-3 floaty" height="80px">
+                  <h5 class=" pt-3 ms-0 m-0">Set up Node.js environment </h5>
+                  <p class="pb-0 fw-normal text-light-emphasis" style="font-size:small;">Set up a Node.js environment and add it to the path</p>
+                </div>
+                <div class="lhs_l border-top ps-4">
+                  <p class="pt-2 m-0">name: Set up Node.js</p><p class="m-0">users: actions/Setup-node v1.1.0</p>
+                </div>
+              </a>
+            </div>
+            <div class="row vhs1 justify-content-end">
+              <a href="https://github.com/marketplace/actions/npm-publish" class="col-6 cocoon shadow p-0 lhs border rounded-3 ">
+                <div class="lhs_u bg-white">
+                  <img src="{% static 'img/play-button.png'%}" class="p-3 floaty" height="80px">
+                  <h5 class=" pt-3 ms-0 m-0">NPM Publish </h5>
+                  <p class="pb-0 fw-normal text-light-emphasis" style="font-size:small;">Automatically publish pakages to npm</p>
+                </div>
+                <div class="lhs_l border-top ps-4">
+                  <p class="pt-2 m-0">name: NPM Publish</p><p class="m-0">users: JS DevTools/npm-publish v1</p>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 py-4  border-end border-2">
+        </div>
+        <div class="col-6 py-4  border-start border-2">
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-4 text-center">
+          <img src="{% static 'img/any-language-f63d5ea8b1ee.svg'%}" class="img-fluid cclr4725 rounded-circle p-4">
+          <h4 class="mt-3 mb-2 fw-semibold">Streamline your CI/CD</h4>
+          <h6 class="text-light-emphasis px-3">Build, test, and deploy projects on any OS, language, or cloud.</h6>
+        </div>
+        <div class="col-4 text-center">
+          <img src="{% static 'img/community-actions-e85c6dbf7099.svg'%}" class=" cclr4725 img-fluid rounded-circle p-4">
+          <h4 class="mt-3 mb-2">thousands of actions</h4>
+          <h6 class="text-light-emphasis px-3 ">Find community-built GitHub Actions workflows on GitHub Marketplace, or build your own.</h6>
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-4 text-center">
+          <img src="{% static 'img/add-tasks-27caf2e75fa0.svg'%}" class="img-fluid cclr4725 rounded-circle p-4">
+          <h4 class="mt-3 mb-2 fw-semibold">Respond to Aerial events</h4>
+          <h6 class="text-light-emphasis px-3">Trigger workflows based on GitHub events, including push, issue creation, new releases, and more.</h6>
+        </div>
+        <div class="col-4 text-center">
+          <img src="{% static 'img/actions-ae00f21cf754.svg'%}" class=" cclr4725 img-fluid rounded-circle p-4">
+          <h4 class="mt-3 mb-2">Collaborate on workflows</h4>
+          <h6 class="text-light-emphasis px-3">Build, share, improve, and reuse actions just like code.</h6>
+        </div>
+      </div>
+      <div class="row mt-5 ">
+        <div class="col-6 py-5  border-end border-2">
+        </div>
+        <div class="col-6 py-5  border-start border-2">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid b_oolr">
+      <div class="container pb-5 ">
+        <div class="row">
+          <div class="col-6 py-5  border-end border-2">
+          </div>
+          <div class="col-6 py-5  border-start border-2">
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-11 text-center">
+            <h6 class="text-dark  fw-light">SECURITY</h6>
+            <h1 class="text-dark style fw-bolder display-3 ">Stay focused on development
+            </h1>
+          </div>
+        </div> 
+        <div class="row px-5">
+          <div class="col-6 py-5  border-end border-2">
+          </div>
+          <div class="col-6 py-5  border-start border-2">
+          </div>
+        </div>
+        <div class="row ps-5">
+          <div class="col-12 ps-5 ">
+            <img src="{% static 'img/security-12e7e6c2174d.svg'%}" height="300px" width="auto"> 
+            <img src="{% static 'img/security-overlay-0542dbf53ea0.webp'%}" class=" rounded-3 image2475 shadow">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 py-5  border-end border-2">
+          </div>
+          <div class="col-6 py-5  border-start border-2">
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-4 text-center">
+            <img src="{% static 'img/access-and-permission-48bd0ea5b89e.svg'%}" class="img-fluid cclr4725 rounded-circle p-4">
+            <h4 class="mt-3 mb-2 fw-semibold">Grant right access to your team</h4>
+            <h6 class="text-light-emphasis px-3">Easily grant, limit, or revoke access for collaborators inside and outside your company.</h6>
+          </div>
+          <div class="col-4 text-center">
+            <img src="{% static 'img/status-check-249bb9839792.svg'%}" class=" cclr4725 img-fluid rounded-circle p-4">
+            <h4 class="mt-3 mb-2">Keep secrets safe</h4>
+            <h6 class="text-light-emphasis px-3 ">Get alerts when secrets are committed to your repositories—and notify over 30 cloud service providers automatically.</h6>
+          </div>
+          <div class="col-4 text-center">
+            <img src="{% static 'img/dependency-insight-a827bd37ef5b.svg'%}" class=" cclr4725 img-fluid rounded-circle p-4">
+            <h4 class="mt-3 mb-2">Find vulnerable dependencies</h4>
+            <h6 class="text-light-emphasis px-3 ">Find community-built GitHub Actions workflows on GitHub Marketplace, or build your own.</h6>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-6 py-5  border-end border-2">
+          </div>
+          <div class="col-6 py-5  border-start border-2">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-1 text-center p-1">
+            <img src="{% static 'img/rocket.jpg'%}">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid bg-black">
+      <div class="container py-4">
+        <div class="row py-5 justify-content-center">
+          <div class="col-10 text-center  py-5 px-5">
+            <h1 class="display-1 kulor fw-bold text-light">Build like the best</h1>
+            <h4 class="radium my-4 ">Get the complete developer platform</h4>
+            <button class="btn btn-light my-4 fs-4 px-5  fw-semibold">Continue with team </button>
+            <button class="btn boton534 my-4 fs-4 ms-2 px-5 fw-semibold">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container my-5">
+        <div class="row justify-content-center my-5 px-5">
+          <h4 class="mb-4">Related resources</h4>
+          <div class="col-4 mb-4">
+              <div class="border rounded-3 raphael">
+                  <img src="{% static 'img/blank-page.png'%}" class="cclr8748 border rounded-circle p-3 mt-4 ms-4 mb-3" >
+                  <h5 class="ms-4 mb-4 fw-semibold style terabit">Aerial actions cheact sheet</h5>
+                  <h6 class=" style  text-light-emphasis mx-4" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis perferendis amet eligendi dignissimos quaerat et.</h6>
+                  <h6 class="mx-4 mb-3 fw-semibold mt-4 style pb-3">Learn more  
+                  </h6>
+              </div>
+          </div>
+          <div class="col-4 mb-4">
+            <div class="border rounded-3 raphael">
+                <img src="{% static 'img/blank-page.png'%}" class="cclr8748 border rounded-circle p-3 mt-4 ms-4 mb-3" >
+                <h5 class="ms-4 mb-4 fw-semibold style terabit">Collaboration is the key</h5>
+                <h6 class=" style  text-light-emphasis mx-4" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis perferendis amet eligendi dignissimos quaerat et.</h6>
+                <h6 class="mx-4 mb-3 fw-semibold mt-4 style pb-3">Learn more  
+                </h6>
+            </div>
+        </div>
+        <div class="col-4 mb-4">
+          <div class="border rounded-3 raphael">
+              <img src="{% static 'img/blank-page.png'%}" class="cclr8748 border rounded-circle p-3 mt-4 ms-4 mb-3" >
+              <h5 class="ms-4 mb-4 fw-semibold style terabit">Build better software</h5>
+              <h6 class=" style  text-light-emphasis mx-4" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis perferendis amet eligendi dignissimos quaerat et.</h6>
+              <h6 class="mx-4 mb-3 fw-semibold mt-4 style pb-3">Learn more  
+              </h6>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="container-fluid bcolor">
+      <div class="row balder ms-5">
+        <div class="col-12 pt-5 pb-4">
+          <img src="{% static 'img/Screenshot 2024-04-13 053747.png'%}" height="80" width="250">
+        </div>
+      </div>
+      <div class="row  ms-5">
+        <div class="col-7 pt-5 balder3 text-light pb-4">
+          <h1 class="display-2 style fw-semibold">Get Ready to go</h1>
+          <h1 class="display-2 style fw-semibold">Beyond Everything</h1>
+          <button class="btn btn-outline-light py-2 px-4 mt-5 ms-2 style fw-semibold fs-3" >ifo@aerial.com</button>
+          <button class="btn btn-outline-light py-2 px-4 mt-5 ms-5 style fw-semibold fs-3" >ifo@aerial_dev.com</button>
+        </div>
+        <div class="col-2 balder1 ps-5 pt-5 text-light style">
+          <h4 class="fw-semibold text-start">Quick Links</h4> 
+          <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Home</a></h5>
+          <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">About Us</a></h5>
+          <h5 class="text-start mt-3 mb-2 tet"><a class="curo" href="#">Service</a></h5>
+          <h5 class="text-start mt-3 mb-5 tet"><a class="curo" href="#">Contact Us</a></h5>
+        </div>
+        <div class="col-3 balder2 ps-5 text-light pt-5">
+          <h4 class="style fw-semibold">Services</h4> 
+          <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Website Development</a></h5>
+          <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">App Development</a></h5>
+          <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Website Maintainence</a></h5>
+          <h5 class="text-start mt-3 mb-5"><a class="curo" href="#">Aerial</a></h5>
+        </div>
+      </div>
+      <div class="row ms-5 text-light balder4">
+        <div class="col-12 ps-5  pt-5 pb-4">
+          <h6> &#169 2024 Aerial. All Rights Reserved.</h6>
+        </div>
+      </div>
+    </div> 
+</body>
+</html>

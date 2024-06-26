@@ -1,0 +1,531 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/effects.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bcolor p-4">
+        <div class="container px-5 py-3">
+          <a class="navbar-brand bcolor ms-5" href="#" style="cursor:default;"><img src="{% static 'img/Screenshot 2024-04-13 053747.png'%}" height="37" width="92"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ps-1 style fsize fw-semibold">
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'index'%}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'about'%}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pol hover-underline-animation" href="{% url 'features'%}">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'price'%}">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tet hover-underline-animation" href="{% url 'contact'%}">Teams</a>
+              </li>
+            </ul>
+            <a href="{% url 'retrieve' %}" type="button" class="btn btn-outline-light but text-dark ms-5 px-4 py-2">CRUD</a>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mb-4 mt-4">
+                <h1 class="my-5 display-3 fw-bold">Get the complete Aerial platform.</h1>
+                <h4 class="fw-bold how">How often do you want to pay ?</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center px-5 my-5">
+            <div class="col-4 text-center p-4 mt-2">
+              <div class="row shadow justify-content-center border rounded-3 bgcolorb">
+                <h3 class="pt-4 fw-bold style">Basic</h3>
+                <p class="px-5 text-light-emphasis">The basics for individuals
+                    and organizations</p>
+                <h5 class="text-light-emphasis">RS<span class="display-4 fw-semibold text-dark"> 400 </span>per month</h5>
+                 <div class="row px-4">
+                    <button class="btn btn-outline-dark my-4   fw-semibold">Join now </button>
+                 </div>
+                  
+                    <div class="accordion accordion-flush content bora pt-1" id="FAQ">
+                      <div class="accordion-header">
+                          <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                              Unlimited public repository 
+                          </button>
+                      </div>
+                      <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+                          <div class="accordion-body">
+                            Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.  
+                          </div>
+                      </div>
+                      <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                          Version updates
+                        </button>
+                    </div>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+                        <div class="accordion-body">
+                            Genshin Impact supports subtitles in English, Japanese, Korean, Traditional  
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                      <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                          2000 min/cd
+                      </button>
+                  </div>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+                      <div class="accordion-body">
+                          Genshin Impact supports subtitles in English, Japanese, Korean, Traditional  
+                      </div>
+                  </div>
+                  <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        500 mb of package storage
+                    </button>
+                </div>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+                    <div class="accordion-body">
+                        Genshin Impact supports subtitles in English, Japanese, Korean, Traditional  
+                    </div>
+                </div>
+                <div class="accordion-header">
+                  <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    Issue and projects
+                  </button>
+                </div>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+                    <div class="accordion-body">
+                        Genshin Impact supports subtitles in English, Japanese, Korean, Traditional  
+                    </div>
+                </div>
+               </div>
+            </div>         
+            </div>
+            <div class="col-4  text-center  p-4  mt-2">
+              <div class="row shadow justify-content-center border rounded-3 bgcolorb">
+                <h3 class="pt-4 fw-bold style">Team</h3>
+              <p class="px-5 text-light-emphasis">Advanced collaboration for
+                individuals and organizations</p>
+              <h5 class="text-light-emphasis">RS<span class="display-4 fw-semibold text-dark"> 850 </span>per month</h5>
+               <div class="row px-4">
+                <button class="btn boton  my-4   fw-semibold">Continue with team</button>
+               </div>
+
+                    <div class="accordion accordion-flush content bora pt-1" id="FAQ2">
+                        <div class="accordion-header">
+                            <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc1">
+                                Access to codespace
+                            </button>
+                        </div>
+                        <div id="dcc1" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                            <div class="accordion-body">
+                            Blazing fast cloud developer environments with flexible compute and pre-configured containers, developers can code, collaborate, and debug from any browser. Pay only for what you use with compute fees starting at $0.18/hr and storage fees at $0.07/GB per month.  
+                            </div>
+                        </div>
+                        <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc2">
+                            Protected branches
+                        </button>
+                    </div>
+                    <div id="dcc2" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                        <div class="accordion-body">
+                            Enforce restrictions on how code branches are merged, including requiring reviews by selected collaborators, or allowing only specific contributors to work on a particular branch.  
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc3">
+                            Multiple reviewers in pull request
+                        </button>
+                    </div>
+                    <div id="dcc3" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                        <div class="accordion-body">
+                        Assign multiple users or a team to review a pull request.  
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc4">
+                        Draft pull request
+                    </button>
+                    </div>
+                    <div id="dcc4" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                    <div class="accordion-body">
+                        Easily discuss and collaborate on pull requests before submitting to formal review.                   
+                    </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc5">
+                    Code owners
+                    </button>
+                    </div>
+                    <div id="dcc5" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                    <div class="accordion-body">
+                        Automatically request reviews—or require approval—by selected contributors when changes are made to sections of code that they own.  
+                    </div>
+                    </div>  
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc6">
+                    Required viewers
+                    </button>
+                    </div>
+                    <div id="dcc6" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                    <div class="accordion-body">
+                        Ensure that pull requests have a specific number of approving reviews before collaborators can make changes to a protected branch.  
+                    </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dcc7">
+                        pages and wiki
+                    </button>
+                    </div>
+                    <div id="dcc7" class="accordion-collapse collapse" data-bs-parent="#FAQ2">
+                        <div class="accordion-body">
+                        Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+             <div class="col-4 shadow text-center bg-primary px-4 m_bottom border rounded-3 mt-2"><span class="text-white fw-medium">RECOMMENDED</span>
+              <div class="row  justify-content-center border rounded-3 bgcolorb">
+                <h3 class="pt-4 fw-bold style">Enterprise</h3>
+              <p class="px-5 text-light-emphasis">Security, compliance,
+                and flexible deployment</p>
+              <h5 class="text-light-emphasis">RS<span class="display-4 fw-semibold text-dark"> 1620 </span>per month</h5>
+              <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-outline-dark my-4 oolo fw-semibold">Free Trial</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn boton my-4 oolo  fw-semibold">Continue</button>
+                </div>
+              </div>
+               
+               
+
+                    <div class="accordion accordion-flush content bora pt-1" id="FAQ3">
+                        <div class="accordion-header">
+                            <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc1">
+                                Enterprise Managed User
+                            </button>
+                        </div>
+                        <div id="bcc1" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                            <div class="accordion-body">
+                                Own and control the user accounts of your enterprise members through your identity provider (IdP)  
+                            </div>
+                        </div>
+                        <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc2">
+                            User provisioning
+                        </button>
+                    </div>
+                    <div id="bcc2" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                        <div class="accordion-body">
+                            Automatically invite members to join your organization when you grant access on your IdP. If you remove a member's access to your GitHub organization on your SAML IdP.
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc3">
+                            Account Management
+                        </button>
+                    </div>
+                    <div id="bcc3" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                        <div class="accordion-body">
+                             Enterprise Cloud includes the option to create an enterprise account, which enables collaboration between multiple organizations.
+
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc4">
+                        Environment protection rules
+                    </button>
+                    </div>
+                    <div id="bcc4" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                    <div class="accordion-body">
+                        When a workflow job references an environment, the job won't start until all of the environment's protection rules pass.
+
+                    </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc5">
+                        Repository Rules
+                    </button>
+                    </div>
+                    <div id="bcc5" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                    <div class="accordion-body">
+                        Enforce branch and tag restrictions across your organization, ensuring branch and tag protection across your repositories. Evaluate rules to asses impact before enforcement.
+
+                    </div>
+                    </div>  
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc6">
+                         Audit Log API
+                    </button>
+                    </div>
+                    <div id="bcc6" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                    <div class="accordion-body">
+                        As a GitHub Enterprise Cloud organization administrator, you can now access log events using our GraphQL API and monitor the activity in your organization.
+
+                    </div>
+                    </div>
+                    <div class="accordion-header">
+                    <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc7">
+                        SAML single sign-on
+                    </button>
+                    </div>
+                    <div id="bcc7" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                        <div class="accordion-body">
+                            Use an identity provider to manage the identities of GitHub users and applications.
+
+                        </div>
+                    </div>
+                    <div class="accordion-header">
+                      <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc8">
+                          Advance auditing
+                      </button>
+                      </div>
+                      <div id="bcc8" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                          <div class="accordion-body">
+                            Quickly review the actions performed by members of your organization. Keep copies of audit log data to ensure secure IP and maintain compliance for your organization.
+
+                        </div>
+                      </div>
+                      <div class="accordion-header">
+                        <button class="accordion-button bcolor1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bcc9">
+                            Aerial connect
+                        </button>
+                        </div>
+                        <div id="bcc9" class="accordion-collapse collapse" data-bs-parent="#FAQ3">
+                            <div class="accordion-body">
+                                Share features and workflows between your GitHub Enterprise Server instance and GitHub Enterprise Cloud.
+
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-5 px-5">
+            <h1 class="my-4 display-3 text-center fw-bold">Additional add-ons</h1>
+            <a href="#" style="text-decoration: none; color:black ;" class="col-3 p-2 mt-5 ">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-25 153359.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style">Aerial Copilot</h4>
+                    <h6 class=" style text_size  text-light-emphasis mx-4">Starting at RS 30 per month after a 30-Day trial.</h6>
+                    <h5 class="mx-4 another_one fw-semibold mt-4 style pb-3">Compare plans </h5>
+
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none; color:black ;" class="col-3 p-2 mt-5">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-25 153435.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style">Codespaces</h4>
+                    <h6 class=" style  text_size text-light-emphasis mx-4">Starting at RS 5 per hour of compute and 15 per GB of storage.</h6>
+                    <h5 class="mx-4 another_one fw-semibold mt-4 style pb-3">Learn more </h5>
+
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none; color:black ;" class="col-3 p-2 mt-5">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-25 153500.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style">Large File Storage</h4>
+                    <h6 class=" style text_size  text-light-emphasis mx-4"> RS 300 per month for 50 GB bandwith and 50 GB storage.</h6>
+                    <h5 class="mx-4 another_one fw-semibold mt-4 style pb-3">Learn more</h5>
+
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none; color:black ;" class="col-3 mt-5 p-2">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/cloud.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style">Aerial Security </h4>
+                    <h6 class=" style text-light-emphasis text_size mx-4">RS 1000 per month per active committer.</h6>
+                    <h5 class="mx-4 another_one fw-semibold mt-4 style pb-3">Learn more </h5>
+
+                </div>
+            </a>
+        </div>
+        <div class="row rounded-3 p-3 bg-black mb-5 ">     
+            <div class="col-12">
+                <ul class="nav nav-pills mb-1 mt-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item ">
+                      <button class="nav-link active p-0 mx-3" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"><img src="{% static 'img/pngwing.com.png'%}" class="iong" ></button>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link p-0 mx-3" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false"><img src="{% static 'img/pngwing.com (1).png'%}" class="iong "></button>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link p-0 mx-3" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-3" aria-selected="false"><img src="{% static 'img/pngwing.com (2).png'%}" class="iong "></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link p-0 mx-3" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-4" aria-selected="false"><img src="{% static 'img/pngwing.com (3).png'%}" class="iong "></button>
+                    </li>
+                    <li class="nav-item ">
+                        <button class="nav-link p-0 mx-3" id="pills-5-tab" data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-5" aria-selected="false"><img src="{% static 'img/pngwing.com (4).png'%}" class="iong "></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link p-0 mx-3" id="pills-6-tab" data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-6" aria-selected="false"><img src="{% static 'img/pngwing.com (5).png'%}" class="iong "></button>
+                    </li>
+                  </ul>
+                  
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5">
+                                <img src="{% static 'img/netdata-d87629cd8043.jpg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3  text-light">
+                                    <h2 class="pt-4 radium">“GitHub Advanced Security is there for every pull request and excels compared to other static analysis tools we have used.”</h2><br>
+                                    <h5> — Dimosthenis Kaponis, CTO, Netdata</h5>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5 ">
+                                <img src="{% static 'img/sap-221410edcdae.jpeg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3 text-light">
+                                    <h2 class="pt-4 radium">“This collaborative way of building software is unstoppable. It isn’t going away—and GitHub has its place in that.”
+                                    </h2><br>
+                                    <h5> — Ingo Sauerzapf, SAP Cloud Development Tools Manager</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5 ">
+                                <img src="{% static 'img/stripe-887a7be6edbb.jpg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3 text-light">
+                                    <h2 class="pt-4 radium">“I have seen some truly revolutionary actions happen in communities on GitHub. It’s a deeply social and critical piece of our infrastructure.”</h2><br>
+                                    <h5>— Michael Glukhovsky, Developer, Stripe</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5 ">
+                                <img src="{% static 'img/trustpilot-be07df951cf3.jpg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3 text-light">
+                                    <h2 class="pt-4 radium">“GitHub is the world’s mono repository, so sharing our open source there is natural.”</h2><br>
+                                    <h5>— Martin Andersen, VP of Engineering, Trustpilot</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5 ">
+                                <img src="{% static 'img/nubank-b168ffda4c13.jpg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3 text-light">
+                                    <h2 class="pt-4 radium">“Using GitHub Enterprise Cloud removes the burden of managing infrastructure, and we don’t need to worry about the availability of our versioning code.”
+
+                                       </h2><br>
+                                    <h5> — Victor Gomes, Infosec Tech Manager, Nubank</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-6 p-5 ">
+                                <img src="{% static 'img/ford-b1aa6cf2ef87.jpg'%}" class="img-fluid float-end rounded-3">
+                            </div>
+                            <div class="col-5 p-5 ps-3 text-light">
+                                    <h2 class="pt-4 radium">“When we started talking about code reuse, we felt like we already had the perfect platform in place: Aerial.”
+                                       </h2><br>
+                                    <h5>— Timothy Carmean, Software Processes and Tools Supervisor, Ford</h5>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>    
+        </div>
+        <div class="row px-5 pt-4 pb-5">
+            <div class="col-2">
+                
+            </div>
+            <div class="col-8">
+                <h1 class="px-5 display-3 text-center fw-bold">We love people who are changing the world</h1>
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+        <div class="row mb-5 mt-2 px-5">
+            <div class="col-4 mb-4">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-31 154830.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style terabit">Open source teams</h4>
+                    <h6 class=" style text_size  text-light-emphasis mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis perferendis amet eligendi dignissimos quaerat et.</h6>
+                    <h5 class="mx-4 mb-3 another_one fw-semibold mt-4 style pb-3">Learn more <span class="fs-4">&#8594;</span> 
+                    </h5>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-31 154850.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 style terabit">Students and teachers</h4>
+                    <h6 class=" style text_size  text-light-emphasis mx-4">
+                        consequuntur dolore assumenda ducimus quia iste reprehenderit Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    </h6>
+                    <h5 class="mx-4 mb-3 another_one fw-semibold mt-4 style pb-3">Learn more <span class="fs-4">&#8594;</span> </h5>
+
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="border rounded-3 raphael">
+                    <img src="{% static 'img/Screenshot 2024-05-31 154746.png'%}" class=" mt-4 ms-4 mb-3" >
+                    <h4 class="ms-4 mb-4 fw-semibold style terabit">Non profits</h4>
+                    <h6 class=" style text_size  text-light-emphasis mx-4"> sit amet consectetur adipisicing elit. Mollitia, minus  impedit, eius animi ullam similique porsitipsam doloremque. </h6>
+                    <h5 class="mx-4 mb-3 another_one fw-semibold mt-4 style pb-3">Learn more <span class="fs-4">&#8594;</span> </h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bcolor">
+        <div class="row balder ms-5">
+          <div class="col-12 pt-5 pb-4">
+            <img src="{% static 'img/Screenshot 2024-04-13 053747.png'%}" height="80" width="250">
+          </div>
+        </div>
+        <div class="row  ms-5">
+          <div class="col-7 pt-5 balder3 text-light pb-4">
+            <h1 class="display-2 style fw-semibold">Get Ready to go</h1>
+            <h1 class="display-2 style fw-semibold">Beyond Everything</h1>
+            <button class="btn btn-outline-light py-2 px-4 mt-5 ms-2 style fw-semibold fs-3" >ifo@aerial.com</button>
+            <button class="btn btn-outline-light py-2 px-4 mt-5 ms-5 style fw-semibold fs-3" >ifo@aerial_dev.com</button>
+          </div>
+          <div class="col-2 balder1 ps-5 pt-5 text-light style">
+            <h4 class="fw-semibold text-start">Quick Links</h4> 
+            <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Home</a></h5>
+            <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">About Us</a></h5>
+            <h5 class="text-start mt-3 mb-2 tet"><a class="curo" href="#">Service</a></h5>
+            <h5 class="text-start mt-3 mb-5 tet"><a class="curo" href="#">Contact Us</a></h5>
+          </div>
+          <div class="col-3 balder2 ps-5 text-light pt-5">
+            <h4 class="style fw-semibold">Services</h4> 
+            <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Website Development</a></h5>
+            <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">App Development</a></h5>
+            <h5 class="text-start mt-3 mb-2"><a class="curo" href="#">Website Maintainence</a></h5>
+            <h5 class="text-start mt-3 mb-5"><a class="curo" href="#">Aerial</a></h5>
+          </div>
+        </div>
+        <div class="row ms-5 text-light balder4">
+          <div class="col-12 ps-5  pt-5 pb-4">
+            <h6> &#169 2024 Aerial. All Rights Reserved.</h6>
+          </div>
+        </div>
+    </div>   
+</body>
+</html>
